@@ -1,16 +1,15 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meme Generator</title>
+{% block title %}
+Meme Generator
+{% endblock %}
 
-  <link rel="stylesheet" href="{% static 'meme_app/css/index.css' %}">
-</head>
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'meme_app/css/index.css' %}">
+{% endblock %}
 
-<body>
+{% block content %}
 
 <div class="app">
   <div class="card">
@@ -36,7 +35,8 @@
   <span>+</span>
 </div>
 
-<script src="{% static 'meme_app/js/index.js' %}"></script>
+{% endblock %}
 
-</body>
-</html>
+{% block extra_js %}
+<script src="{% static 'meme_app/js/index.js' %}"></script>
+{% endblock %}

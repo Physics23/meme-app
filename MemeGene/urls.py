@@ -24,5 +24,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('meme_app.urls')),
+    path('meme/', include('meme_app.urls')),
+    path('cipher/', include('cipher_app.urls')),
 ]

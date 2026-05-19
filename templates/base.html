@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>{% block title %}MemeGene{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+
+    {% block extra_css %}{% endblock %}
+
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>MemeGene</h2>
+
+        <a href="/meme/">🎨 Meme App</a>
+        <a href="/cipher/">🔐 Cipher App</a>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+</div>
+
+{% block extra_js %}{% endblock %}
+
+</body>
+</html>

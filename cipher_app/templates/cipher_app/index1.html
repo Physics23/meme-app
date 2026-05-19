@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Caesar Cipher
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'cipher_app/css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+  <h1>Caesar Cipher 🔐</h1>
+
+  <label>Enter Message</label>
+
+  <textarea id="message" placeholder="Type your message..."></textarea>
+
+  <label>Shift Value</label>
+
+  <input type="number" id="shift" value="42">
+
+  <div class="buttons">
+
+    <button class="encrypt-btn" onclick="handleEncrypt()">
+      Encrypt
+    </button>
+
+    <button class="decrypt-btn" onclick="handleDecrypt()">
+      Decrypt
+    </button>
+
+  </div>
+
+  <label>Result</label>
+
+  <div class="output" id="output"></div>
+
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'cipher_app/js/script.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* MAIN LAYOUT */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    background: #1f1f2e;
+    color: white;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+
+/* SIDEBAR TITLE */
+.sidebar h2 {
+    color: orange;
+    margin-bottom: 20px;
+}
+
+/* LINKS */
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    display: block;
+}
+
+.sidebar a:hover {
+    background: #33334d;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    margin-left: 240px;
+    padding: 30px;
+    width: 100%;
+}
